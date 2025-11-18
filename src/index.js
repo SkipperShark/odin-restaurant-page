@@ -1,3 +1,3 @@
 import './styles.css'
 
-console.log("The path travelled alone leads to growth");
+console.log("An apprentice no more, now a journeyman");
