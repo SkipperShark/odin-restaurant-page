@@ -12,7 +12,7 @@ class DOM {
   displayHomePage() {
     this.clearContent();
 
-    const logo = document.createElement("logo");
+    const logo = document.createElement("img");
     logo.src = odinLogo;
     logo.altText = "An icon of the odin project logo";
 
