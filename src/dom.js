@@ -1,16 +1,30 @@
+import odinLogo from "../assets/images/odin-logo.png";
+
 class DOM {
   constructor() {
-    self.document = document;
     self.divContent = document.getElementById("content");
   }
 
-  displayHomePage() {
-    img = document.createElement("img");
-    h1 = document.createElement("h1");
-    h1.innerText = "Odin Restaurant Page";
+  clearContent() {
+    self.divContent.innerHTML = "";
+  }
 
-    headline = document.createElement("p");
+  displayHomePage() {
+    this.clearContent();
+
+    const logo = document.createElement("logo");
+    logo.src = odinLogo;
+    logo.altText = "An icon of the odin project logo";
+
+    const title = document.createElement("h1");
+    title.innerText = "Odin Restaurant Page";
+
+    const headline = document.createElement("p");
     headline.innerText =
       "Hello! Welcome to the best food in valhalla! Hope you enjoy :)";
+
+    self.divContent.append(logo, title, headline);
   }
 }
+
+export default DOM;
