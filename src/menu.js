@@ -7,10 +7,10 @@ class Menu {
     const orderedList = document.createElement("ol");
 
     const menuItem1 = document.createElement("li");
-    menuItem1.innerText = "Roasted Elk with beer";
+    menuItem1.innerText = "Roasted Elk with looted beer";
 
     const menuItem2 = document.createElement("li");
-    menuItem2.innerText = "Grilled duck with mead";
+    menuItem2.innerText = "Grilled duck with ransacked mead";
 
     const menuItem3 = document.createElement("li");
     menuItem3.innerText = "Fried boar with pillaged wine";

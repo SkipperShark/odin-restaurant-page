@@ -10,9 +10,21 @@ class DOM {
     this.divContent.innerHTML = "";
   }
 
-  contentNav(divNewContent) {
+  modifyContentTo(divNewContent) {
     this.clearContent();
     this.divContent.append(divNewContent);
+  }
+
+  bindHomeButton(handler) {
+    this.btnHome.addEventListener("click", handler);
+  }
+
+  bindMenuButton(handler) {
+    this.btnMenu.addEventListener("click", handler);
+  }
+
+  bindAboutButton(handler) {
+    this.btnAbout.addEventListener("click", handler);
   }
 }
 

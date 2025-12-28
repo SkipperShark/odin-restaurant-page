@@ -1,24 +1,28 @@
 import Home from "./home.js";
 import DOM from "./dom.js";
 import Menu from "./menu.js";
+import About from "./about.js";
 import "./style.css";
 
 class Controller {
   constructor() {
     this.dom = new DOM();
-  }
-
-  displayHome() {
     const homeContent = Home.content();
-    this.dom.contentNav(homeContent);
-  }
 
-  displayMenu() {
-    const menuContent = Menu.content();
-    this.dom.contentNav(menuContent);
+    this.dom.bindHomeButton(() => {
+      this.dom.modifyContentTo(homeContent);
+    });
+
+    this.dom.bindMenuButton(() => {
+      this.dom.modifyContentTo(Menu.content());
+    });
+
+    this.dom.bindAboutButton(() => {
+      this.dom.modifyContentTo(About.content());
+    });
+
+    this.dom.modifyContentTo(homeContent);
   }
-  displayAbout() {}
 }
 
-const controller = new Controller();
-controller.displayHome();
+new Controller();
