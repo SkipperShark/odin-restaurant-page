@@ -1,6 +1,6 @@
 import odinLogo from "../assets/images/odin-logo.png";
 
-class HomePage {
+class Home {
   static content() {
     console.log("HomePage content");
     const logo = document.createElement("img");
@@ -21,4 +21,4 @@ class HomePage {
   }
 }
 
-export default HomePage;
+export default Home;
